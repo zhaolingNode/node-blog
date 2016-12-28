@@ -1,0 +1,19 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body,html{
+	width: 100%;
+	overflow-x: hidden;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+	color: #00B7FF;
+}
+ul,li{
+	list-style: none;
+}
+img{
+	border: none;
+}
+

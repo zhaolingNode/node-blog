@@ -1,0 +1,32 @@
+{{>head}}
+<body id="post">
+{{>header-nav}}
+
+<script src='/static/javascripts/marked.min.js'></script>
+<div class="row">
+	<div class="col-sm-3">
+		{{>nav-left}}
+	</div>
+
+	<div class="col-sm-9">
+		<div class="panel-body">
+			<form class="form" method="post" action="/info/post/{{id}}" id="edmitPost" onsubmit="return save()">
+				<div class="form-group">
+					<label for="title">标题</label>
+					<input type="text" class="form-control" id="title" name="title" value="{{post.title}}"><br/>
+				<textarea id="content" name="content" class="form-control">{{post.content}}</textarea><br/>
+				<div class="alert alert-danger" style="display: none;"></div>
+					<div id="preview"></div>
+				</div>
+				<div class="form-group">
+					<button type="submit" class="btn btn-default">保存</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+{{>foot}}
+<script src='/static/javascripts/post.js'></script>
+</body>
+</html>

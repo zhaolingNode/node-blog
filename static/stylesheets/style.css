@@ -1,0 +1,49 @@
+.index{
+  margin-top: 80px;
+}
+.center{
+  margin-top: 80px;
+}
+#content{
+  height: 385px;
+}
+#preview{
+  height: 460px;
+  overflow: auto;
+  display: none;
+}
+#profile .headPortrait{
+   display: block;
+   overflow: hidden;
+}
+.marketing{
+  margin: 20px 0;
+  margin-bottom: 60px;
+}
+.table tr td{
+  height: 20px;
+  line-height: 20px;
+}
+.pContent{
+  width: 250px;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+}
+body{
+  padding-bottom: 100px;
+}
+.post-excerpt p{
+  height: 60px;
+  line-height: 20px;
+  overflow: hidden;
+}
+.footer{
+  width: 100%;
+  overflow: hidden;
+  height: 40px;
+  line-height: 40px;
+  background: #000000;
+  color: #fff;
+  text-align: center;
+}

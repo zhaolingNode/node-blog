@@ -1,0 +1,38 @@
+{{>head}}
+<body>
+{{>header-nav}}
+
+<div class="row">
+<div class="col-sm-3">
+	{{>nav-left}}
+</div>
+
+<div class="col-sm-9">
+	<div class="clearfix"><a href='/info/post/new' class='btn btn-success pull-right'>创建</a></div><br/>
+<table class="table">
+	<tbody>
+	{{#each posts}}
+		<tr>
+			<td><a href="/postDetail/{{id}}">{{title}}</a></td>
+			<td><p class="pContent">{{content}}</p></td>
+			<td class="date text-muted">
+				<small>{{detailDate date}}</small>
+			</td>
+			<td>
+				<a class="btn btn-xs btn-primary" href="/info/post/{{id}}">编辑</a>
+				<a class="btn btn-xs btn-danger" onclick="deletePost('{{id}}')">删除</a>
+			</td>
+		</tr>
+	{{/each}}
+	</tbody>
+</table><br/>
+
+	{{>page}}
+
+</div>
+</div>
+
+{{>foot}}
+<script src='/static/javascripts/post.js'></script>
+</body>
+</html>

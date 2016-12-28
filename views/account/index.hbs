@@ -1,0 +1,60 @@
+{{>head}}
+<body>
+{{>header-nav}}
+
+<!--banner-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+	</ol>
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+			<img class="first-slide" src="/static/images/mac.png" alt="First slide">
+			<div class="container">
+				<div class="carousel-caption">
+					<h2>极致体验</h2>
+					<p>优雅简洁的外观设计，细心的交互方式，帮助您更快捷地创建博客，更方便地浏览您的博客内容。</p>
+					<p><a class="btn btn-primary" href="/register">立即加入</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<img class="second-slide" src="/static/images/cloud.png" alt="Second slide">
+			<div class="container">
+				<div class="carousel-caption">
+					<h2>Markdown 引擎</h2>
+					<p>Sample Blog 使用 Markdown 创建易读易写的博客文章。Markdown 由一些经过精挑细选符号所组成，其作用一目了然。</p>
+					<p><a class="btn btn-primary" href="/register">深入了解</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container marketing">
+	<!-- Three columns of text below the carousel -->
+	<div class="row">
+		{{#each users}}
+			<div class="col-lg-4">
+				{{#if avatar}}
+					<img class="img-circle" src="/static/{{avatar}}" width="140" height="140">
+				{{else}}
+					<img class="img-circle" src="/static/images/default-avatar.jpg" width="140" height="140">
+				{{/if}}
+
+				<h2>{{title}}</h2>
+
+				<p>{{description}}</p>
+
+				<p><a class="btn btn-default" href="/user/{{id}}" role="button">访问 &raquo;</a></p>
+			</div>
+		{{/each}}
+	</div>
+</div>
+
+
+
+{{>foot}}
+</body>
+</html>

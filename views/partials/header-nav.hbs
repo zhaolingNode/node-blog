@@ -1,0 +1,20 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/">我的第一个博客</a>
+		</div>
+		<div>
+			<ul class="nav navbar-nav">
+				{{#if user}}
+					<li><a href="/logout">退出</a></li>
+					<li><a href="/info/profile">{{user.name}}</a></li>
+					<li><a href="/info/post">新建博客</a></li>
+				{{else}}
+					<li><a href="/login">登录</a></li>
+					<li><a href="/register">注册</a></li>
+				{{/if}}
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container">

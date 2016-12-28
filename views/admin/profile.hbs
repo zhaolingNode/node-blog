@@ -1,0 +1,60 @@
+{{>head}}
+{{>head}}
+<body id="profile">
+{{>header-nav}}
+
+
+<div class="row">
+	<div class="col-sm-3">
+		{{>nav-left}}
+	</div>
+
+	<div class="col-sm-9">
+
+<form class="form-horizontal form infoForm" role="form"  method="post" action="/info/profile"  enctype="multipart/form-data">
+	<div class="form-group">
+		<div class="col-sm-2">
+		{{#if user.avatar}}
+			<img class="img-circle" src="/static/{{user.avatar}}" width="120" height="120">
+		{{else}}
+				<img class="img-circle" src="/static/images/default-avatar.jpg" width="140" height="140">
+		{{/if}}
+		</div>
+		<div class="col-sm-10">
+			<label for="avatar">头像</label>
+			<input type="file" name="avatar" accept="image/*">
+			<p class="help-block">在这里选择并上传你的头像</p>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="title" class="col-sm-2 control-label">博客名称</label>
+		<div class="col-sm-10">
+			<input type="text" name="title" class="form-control" id="title" placeholder="请输入邮箱" value="{{user.title}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="description" class="col-sm-2 control-label">博客描述</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" name="description" id="description" placeholder="这是一个了不起的博客..." value="{{user.description}}">
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label"></label>
+		<div class="col-sm-10">
+			<div class="alert alert-danger" style="display: none;"></div>
+			<div class="alert alert-success" style="display: none;"></div>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-default">保存</button>
+		</div>
+	</div>
+</form>
+
+  </div>
+</div>
+
+{{>foot}}
+</body>
+</html>

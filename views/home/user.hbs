@@ -1,0 +1,31 @@
+{{>head}}
+<body>
+{{>header-nav}}
+
+
+{{#each pager}}
+	<div class="post">
+		<div class="post-heading">
+			<h2 class="post-title"><a class="inverse" href="/postDetail/{{id}}">{{title}}</a></h2>
+
+			<div class="post-info">
+				<p>
+					<span class="text-muted">{{detailDate date}}</span>
+					<span class="pull-right"><a href="/postDetail/{{id}}#comments">{{comments.length}} 个评论</a></span>
+				</p>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="post-excerpt">
+			<p>{{content}}</p>
+		</div>
+	</div>
+	<hr>
+{{/each}}
+
+{{>page}}
+
+{{>foot}}
+</body>
+</html>
